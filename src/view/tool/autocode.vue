@@ -102,7 +102,11 @@ export default {
   data () {
     return {
       temp: { moduleName: 'content', className: 'student', modelName: 'student', indexName: 'index.vue' },
-      fields: [{ label: 'ID', field: 'id', type: 2, required: 0, mark: 1 }], // 主键
+      fields: [{ label: 'ID', field: 'id', type: 2, required: 0, mark: 1 },// 主键
+      { label: '姓名', field: 'name', placeholder:'请输入姓名', type: 1, required: 1, mark: 2 },
+      { label: '性别', field: 'sex', type: 1, required: 0, mark: 3 },
+      { label: '年龄', field: '', type: 1, required: 0, mark: 3 }
+      ], 
       ruleValidate: rules,
       vaisible: false,
       modalTitle: '',

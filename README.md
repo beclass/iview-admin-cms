@@ -1,7 +1,10 @@
 # fsadmin-cms
 > 简化繁琐重复的工作，全套restful风格， 实现前端orm，关联查询，自动生成基础页面的实用，易扩展的admin-cms
 
-#### 例子
+#### 效果图
+![img](http://pic.loveyh.com/fsadmin-demo.gif)
+
+#### 在线地址
 
 [http://120.55.160.92:8082](http://120.55.160.92:8082)
 
@@ -15,7 +18,7 @@
 优化中...
 
 
-# 环境配置
+## 环境配置
 - `vue^2.5.10` 
 - `vue-cli3`
 - `iview^3.2.2`
@@ -35,7 +38,7 @@ $ npm run dev
 $ npm run build
 ```
 
-## 约定:
+## 约定
 - `filter.search$$title$$all` - 模糊查询title
 ```bash
     all：模糊查询
@@ -60,8 +63,7 @@ $ npm run build
 
 
 
-
-## 未完待续...
+未完待续...
 
 
 

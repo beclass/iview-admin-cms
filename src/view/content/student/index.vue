@@ -25,10 +25,14 @@
 </template>
 <script>
 import { list,create,update,remove } from '@/api/base'
+import {formatDay} from '@/libs/util'
 import Modal from './modal'
 const columns=[
   {title: 'ID',key: 'id',width:60,align: 'center'},
   {title: '姓名',key: 'name',align: 'center'},
+  {title: '性别',key: 'sex',align: 'center',render: (h, params) => { return h('div',['男','女'][params.row.sex])}},
+  {title: '年龄',key: 'age',align: 'center'},
+  {title: '生日',key: 'birth',align: 'center',render: (h, params) => { return h('div',formatDay(params.row.birth))}},
   {title: '操作',slot: 'action',width: 150,align: 'center'}
 ]
 export default {
@@ -67,6 +71,7 @@ export default {
     },
     async save(formData){
       if(!formData) formData = this.temp
+      formData.birth = formatDay(formData.birth)
       const {id,...vals}=formData
       if(id){
         const res = await update(this.model,id,vals)
