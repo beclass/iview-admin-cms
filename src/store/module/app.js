@@ -48,6 +48,7 @@ export default {
     },
     updateMenuList (state, routes) {
       // 接受前台数组，刷新菜单
+      console.log('来啊')
       router.addRoutes(routes)
       state.menuList = routes
     },

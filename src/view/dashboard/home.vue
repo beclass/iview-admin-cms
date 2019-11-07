@@ -13,7 +13,7 @@
           <a class="coupon-btn" href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=mpd2xfug" target="_blank">立即领取</a>
         </div>
         <div class="coupon-activity-img">
-          <a href="https://www.aliyun.com/acts/limit-buy?userCode=mpd2xfug" target="_blank">
+          <a href="https://dwz.cn/e8atY6gf" target="_blank">
           <img src="http://pic.loveyh.com/limit-buy.jpg" width="280" height="118"></a>
         </div>
       </div>

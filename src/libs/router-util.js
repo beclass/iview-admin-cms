@@ -9,20 +9,13 @@ import parentView from '@/components/parent-view'
 import store from '@/store'
 let gotRouter
 // 初始化路由
-export const initRouter = () => {
+export const  initRouter = async() => {
   if (!getToken()) return
-  let routerData
-  if (!gotRouter) {
-    getMenus().then(res => {
-      routerData = res
-      localSave('dynamicRouter', JSON.stringify(routerData)) // 存储路由到localStorage
-      gotRouter = filterAsyncRouter(routerData) // 过滤路由,路由组件转换
-      store.commit('updateMenuList', gotRouter)
-      dynamicRouterAdd()
-    })
-  } else {
-    gotRouter = dynamicRouterAdd()
-  }
+  const menus = await  getMenus();
+  localSave('dynamicRouter', JSON.stringify(menus)) // 存储路由到localStorage
+  gotRouter = filterAsyncRouter(menus) // 过滤路由,路由组件转换
+  store.commit('updateMenuList', gotRouter)
+  dynamicRouterAdd()
   return gotRouter
 }
 // 加载路由菜单,从localStorage拿到路由,在创建路由时使用

@@ -2,7 +2,7 @@
   <Card>
     <div>
       <Input v-model="filter.search$$title$$all" placeholder="名称" style="width: 200px"/>
-      <Select v-model="filter.articleType_id" clearable  style="width:150px;margin-left:10px">
+      <Select v-model="filter.article_type_id" clearable  style="width:150px;margin-left:10px">
         <Option v-for="(item,index) in types" :key="index" :value="item.id">{{item.name}}</Option>
       </Select>&nbsp;
       <Button @click="search" icon="ios-search" type="primary">搜索</Button>&nbsp;

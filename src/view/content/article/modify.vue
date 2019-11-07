@@ -43,7 +43,7 @@ import Editor from '_c/editor'
 import Upload from '_c/upload'
 const rules = {
   title: [{ required: true, message: '标题不能为空', trigger: 'blur' }],
-  articleType_id: [{ type: 'number', required: true, message: '请选择类型', trigger: 'change' }]
+  article_type_id: [{ type: 'number', required: true, message: '请选择类型', trigger: 'change' }]
 }
 export default {
   components: {
