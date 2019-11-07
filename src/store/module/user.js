@@ -8,7 +8,6 @@ import {
   restoreTrash
 } from '@/api/user'
 import { setToken, localSave } from '@/libs/util'
-import store from '@/store'
 import { initRouter } from '@/libs/router-util' // 引入动态菜单渲染
 
 export default {
@@ -81,7 +80,6 @@ export default {
       commit('setAccess', [])
       localSave('dynamicRouter', []) // 清空本地路由
       localSave('tagNaveList', []) // 清空localStorage中的tagNaveList记录
-      store.commit('updateMenuList', [])
     },
     // 获取用户相关信息
     async getUserInfo ({ state, commit }) {
